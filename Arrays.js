@@ -27,10 +27,19 @@ class myCustomArray {
     return lastItem;
   }
   pop(index) {
+    // removing values but not rearranging the index valeus hence fucked up
     const itemAtIndex = this.data[index];
     delete this.data[index];
     return itemAtIndex;
   }
+
+  deleteAtindex(index) {
+    const item = this.data[index];
+    for (let i = index; i < this.length; i++) {
+      this.data[i] = this.data[i + 1];
+    }
+  }
+
   shift() {
     // removes first element from list/array
     const firstItem = this.data[0];
@@ -52,5 +61,7 @@ myarray.push(34);
 // console.log("get method", myarray.get(0));
 // console.log(myarray.pop());
 console.log(myarray);
-console.log("shift", myarray.shift());
+// console.log("shift", myarray.shift());
+// console.log(myarray);
+myarray.pop(1);
 console.log(myarray);
