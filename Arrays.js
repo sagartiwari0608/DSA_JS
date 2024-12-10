@@ -65,5 +65,3 @@ console.log(myarray);
 // console.log(myarray);
 myarray.pop(1);
 console.log(myarray);
-
-// one point we have to remember that if
